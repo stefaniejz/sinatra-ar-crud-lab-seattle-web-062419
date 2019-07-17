@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/new' do
-    @article= Article.new
+    # @article= Article.new
     erb :new
   end
 
@@ -22,7 +22,6 @@ class ApplicationController < Sinatra::Base
     @article = Article.find(params[:id])
     erb :show
   end
-
   
 
   post '/articles' do 
